@@ -1,6 +1,7 @@
 import java.util.*;
 class student 
 {
+	public int n;
 	public int marks[]=new int[3];
 	public int credits[]=new int[3];
 	public void student_details()
@@ -13,7 +14,9 @@ class student
 		name=s.nextLine();
 		System.out.print("enter student usn :");
 		usn=s.nextLine();
-		for(i=0;i<3;i++)
+		System.out.print("enter number of subjects :");
+		n=s.nextInt();
+		for(i=0;i<n;i++)
 		{
 			System.out.print("enter marks of subject"+(i+1)+":"); 	
 				marks[i]=s.nextInt();
@@ -30,7 +33,7 @@ class student
 		int t_cr=0;
 		float cgpa;
 		int grade_points;
-		for(i=0;i<3;i++)
+		for(i=0;i<n;i++)
 		{
 			if(marks[i]>=90)
 				grade_points=10;
@@ -65,3 +68,4 @@ class CGPA
 		System.out.println("CGPA="+cgpa);
 	}
 }
+
