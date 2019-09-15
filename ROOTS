@@ -1,0 +1,43 @@
+import java.lang.math;
+import java.util.*;
+class roots
+{
+    public static void main(Strings args[])
+    {
+        System.out.println("enter coefficients: ");
+        Scanner s=new Scanner(System in);
+        int a=s.nextInt();
+        int b=s.next Int();
+        int c=s.nextInt();
+        float r1;
+        float r2;
+        int d;
+        d=b*b-4*a*c;
+        if(d==0)
+        {
+            r1=r2=-b/(2*a);
+            System.out.println("roots are real and equal");
+        }
+        else if(d>0)
+        {
+            r1=(-b+Math.sqrt(d))/(2*a);
+            r2=(-b-Math.sqrt(d))/(2*a);
+            System.out.println("roots are real and different");
+        }
+        else
+        {
+            float x;
+            float y;
+            x=-b/(2*a);
+            y=Math.sqrt(-d)/(2*a);
+            System.out.println("roots are imaginary");
+            System.out.println("Root1="+x+"+"+y);
+            System.out.println("Root2="+x+"-"+y);
+        }
+        if(d>=0)
+        {
+            System.out.println("Root1="+r1);
+            System.out.println("Root2="+r2);
+        }
+   }
+}
