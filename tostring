@@ -1,0 +1,88 @@
+import java.util.*;
+class book
+{
+	public String name;
+	public String author;
+	public int price;
+	public int num_page;
+	
+	Scanner s=new Scanner(System.in);
+
+	book()
+	{}
+	
+	book(String n,String au,int p,int np) 
+	{
+		name=n;
+		author=au;
+		price=p;
+		num_page=np;
+	}
+
+	public void set()
+	{	
+		
+		System.out.print("Enter name of book: ");
+		name=s.nextLine();
+		System.out.print("Enter author of book: ");
+		author=s.nextLine();	
+		System.out.print("Enter price of book: ");
+		price=s.nextInt();
+		System.out.print("Enter number of pages of book: ");
+		num_page=s.nextInt();		
+	}
+	
+	public void get()
+	{
+		System.out.println("\n\nName of book: "+name);	
+		System.out.println("Author of book: "+author);
+		System.out.println("Price of book: "+price);
+		System.out.println("Number of pages of book: "+num_page);
+	}
+	
+	public String toString()
+	{
+		return("Name of book: "+name+"\nAuthor of book: "+author+"\nPrice of book: "+price+"\nNumber of pages of book: "+num_page);
+		
+	}
+
+}
+
+class book_demo
+{
+	public static void main(String args[])
+	{	
+		int n, i, c;
+		book obj[]=new book[20];
+		book b=new book();
+		Scanner s=new Scanner(System.in);
+		System.out.print("\nEnter number of books :");
+		n=s.nextInt();
+		System.out.print("Enter book number :");
+				i=s.nextInt();
+		while(i<=n)
+		{		
+				obj[i]=new book();
+				System.out.println("\n\nChoose an option: ");
+				System.out.println("1.Set data and display data\n2.display object content\n3.exit");
+				c=s.nextInt();
+				
+				switch(c)
+				{
+					case 1: obj[i].set();
+						obj[i].get();
+						break;
+						
+					case 2: System.out.println(obj[i]);
+						break;
+
+					case 3: System.exit(0);
+					
+					defalut: System.out.println("invalid input");
+				}
+				System.out.print("Enter book number :");
+				i=s.nextInt();
+		}
+	}
+}
+			
